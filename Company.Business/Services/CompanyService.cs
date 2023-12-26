@@ -38,6 +38,22 @@ public class CompanyService : ICompanyService
 
     public void GetDepartmentIncluded(string departmentName)
     {
-        throw new NotImplementedException();
+        foreach (var company in CompanyDbContext.Companies)
+        {
+            Console.WriteLine($"id: {company.Id}; Company name: {company.Name}");
+        }
+    }
+
+    public Core.Entities.Company? GetCompany(string name)
+    {
+        if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
+        return CompanyDbContext.Companies.Find(c => c.Name.ToLower() == name.ToLower());
+
+    }
+
+    public Core.Entities.Company? FindCompanyByName(string name)
+    {
+        if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
+        return CompanyDbContext.Companies.Find(c => c.Name.ToLower() == name.ToLower());
     }
 }

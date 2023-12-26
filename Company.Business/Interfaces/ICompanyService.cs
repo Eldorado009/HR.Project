@@ -9,4 +9,6 @@ public interface ICompanyService
     void GetAllDepartment(string departmentName);
     Company.Core.Entities.Company GetCompany(int Id);
     void GetDepartmentIncluded(string departmentName);
+    Company.Core.Entities.Company? FindCompanyByName(string name);
+
 }

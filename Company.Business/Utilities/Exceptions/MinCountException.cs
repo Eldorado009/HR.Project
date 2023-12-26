@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Company.Business.Utilities.Exceptions;
 
-namespace Company.Business.Utilities.Exceptions
+public class MinCountException:Exception
 {
-    internal class MinCountException
+    public MinCountException(string message) : base(message) 
     {
+    
     }
 }
