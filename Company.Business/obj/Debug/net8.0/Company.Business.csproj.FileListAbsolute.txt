@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\Company\Company.Business\bin\Debug\net8.0\Company.Business.deps.json
+C:\Users\user\source\repos\Company\Company.Business\bin\Debug\net8.0\Company.Business.dll
+C:\Users\user\source\repos\Company\Company.Business\bin\Debug\net8.0\Company.Business.pdb
+C:\Users\user\source\repos\Company\Company.Business\bin\Debug\net8.0\Company.Core.dll
+C:\Users\user\source\repos\Company\Company.Business\bin\Debug\net8.0\Company.DataAccess.dll
+C:\Users\user\source\repos\Company\Company.Business\bin\Debug\net8.0\Company.DataAccess.pdb
+C:\Users\user\source\repos\Company\Company.Business\bin\Debug\net8.0\Company.Core.pdb
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\Company.Business.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\Company.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\Company.Business.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\Company.Business.AssemblyInfo.cs
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\Company.Business.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\Company.Business.csproj.CopyComplete
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\Company.Business.dll
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\refint\Company.Business.dll
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\Company.Business.pdb
+C:\Users\user\source\repos\Company\Company.Business\obj\Debug\net8.0\ref\Company.Business.dll

@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\Company\Company.DataAccess\bin\Debug\net8.0\Company.DataAccess.deps.json
+C:\Users\user\source\repos\Company\Company.DataAccess\bin\Debug\net8.0\Company.DataAccess.dll
+C:\Users\user\source\repos\Company\Company.DataAccess\bin\Debug\net8.0\Company.DataAccess.pdb
+C:\Users\user\source\repos\Company\Company.DataAccess\bin\Debug\net8.0\Company.Core.dll
+C:\Users\user\source\repos\Company\Company.DataAccess\bin\Debug\net8.0\Company.Core.pdb
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\Company.DataAccess.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\Company.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\Company.DataAccess.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\Company.DataAccess.AssemblyInfo.cs
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\Company.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\Company.DataAccess.csproj.CopyComplete
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\Company.DataAccess.dll
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\refint\Company.DataAccess.dll
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\Company.DataAccess.pdb
+C:\Users\user\source\repos\Company\Company.DataAccess\obj\Debug\net8.0\ref\Company.DataAccess.dll

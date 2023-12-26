@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Company.Business/1.0.0": {
+        "dependencies": {
+          "Company.DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "Company.Business.dll": {}
+        }
+      },
+      "Company.Core/1.0.0": {
+        "runtime": {
+          "Company.Core.dll": {}
+        }
+      },
+      "Company.DataAccess/1.0.0": {
+        "dependencies": {
+          "Company.Core": "1.0.0"
+        },
+        "runtime": {
+          "Company.DataAccess.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Company.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Company.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Company.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
