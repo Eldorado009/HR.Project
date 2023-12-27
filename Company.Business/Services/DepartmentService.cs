@@ -5,7 +5,7 @@ using Company.DataAccess.Contexts;
 
 namespace Company.Business.Services;
 
-public class DepartmentService : IDepartmentServices
+public class DepartmentService : IDepartmentService
 {
     private ICompanyService companyService { get; }
     public DepartmentService()
@@ -31,13 +31,14 @@ public class DepartmentService : IDepartmentServices
     {
         throw new NotImplementedException();
     }
-    //Department IDepartmentServices.GetById(int departmentId)
-    //{
-
-    //}
-    Department IDepartmentServices.GetByName(string name)
+    public Department? GetById(int departmenId)
     {
-        throw new NotImplementedException();
+        throw new NotSupportedException();
+    }
+    public Department? GetByName(string name)
+    {
+        if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
+        return CompanyDbContext.Departaments.Find(d=>d.Name.ToLower()==name.ToLower());
     }
 
     public void GetDepartmentEmployees(string departmentName)
