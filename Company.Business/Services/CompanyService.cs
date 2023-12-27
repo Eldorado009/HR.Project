@@ -36,7 +36,7 @@ public class CompanyService : ICompanyService
         throw new NotImplementedException();
     }
 
-    public void GetDepartmentIncluded(string departmentName)
+    public void GetDepartmentIncluded()
     {
         foreach (var company in CompanyDbContext.Companies)
         {

@@ -4,7 +4,7 @@ namespace Company.Business.Interfaces;
 
 public interface IDepartmentService
 {
-    void Create(string name, int employeeLimit, int companyId, string companyName);
+    void Create(string name, int employeeLimit, string companyName);
     public Department? GetById(int departmenId);
     public Department? GetByName(string name);
     void AddEmployee(string name, int employeeId, int companyId );

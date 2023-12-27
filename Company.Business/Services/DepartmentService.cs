@@ -12,7 +12,7 @@ public class DepartmentService : IDepartmentService
     {
         companyService = new CompanyService();
     }
-    public void Create(string name, int employeeLimit, int companyId, string companyName)
+    public void Create(string name, int employeeLimit, string companyName)
     {
         if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
         Department dbDepartment =
@@ -23,7 +23,7 @@ public class DepartmentService : IDepartmentService
             throw new MinCountException("Minimum employee count requirement is 5");
         Company.Core.Entities.Company? company = companyService.FindCompanyByName(companyName);
         if (company is null) throw new NotFiniteNumberException($"{companyName} is not exist");
-        Department department = new(name,employeeLimit,companyId,company);
+        Department department = new(name, employeeLimit, company);
         CompanyDbContext.Departaments.Add(department);
 
     }
@@ -38,7 +38,7 @@ public class DepartmentService : IDepartmentService
     public Department? GetByName(string name)
     {
         if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
-        return CompanyDbContext.Departaments.Find(d=>d.Name.ToLower()==name.ToLower());
+        return CompanyDbContext.Departaments.Find(d => d.Name.ToLower() == name.ToLower());
     }
 
     public void GetDepartmentEmployees(string departmentName)
