@@ -50,7 +50,11 @@ public class DepartmentService : IDepartmentService
     {
         foreach (var department in CompanyDbContext.Departaments)
         {
-            Console.WriteLine($"Id: {department.Id}; Department name: {department.Name}");
+            if (department.Company.Name=="Furniture")
+            {
+                    Console.WriteLine($"Id: {department.Id}; Department name: {department.Name}");
+            
+            }     
         }
     }
 

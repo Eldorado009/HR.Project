@@ -9,7 +9,7 @@ public class Department : IEntity
     public int EmployeeLimit { get; set; }
     public int CurrentEmployeeCount { get; set; }
     public Company Company { get; set; }
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = true;
     private static int _id;
     public Department(string name, int employeeLimit,  Company company)
     {
