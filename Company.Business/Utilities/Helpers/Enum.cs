@@ -6,6 +6,7 @@ public enum Menu
     ShowAllCompany,
     ActivatedCompany,
     DeleteCompany,
+    GetByNameCompany,
     CreateDepartment,
-    ShowAllDepartment
+    ShowAllDepartment,
 }

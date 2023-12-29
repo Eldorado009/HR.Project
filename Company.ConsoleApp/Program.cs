@@ -15,9 +15,10 @@ while (isContinue)
                       "2 - Show All Company \n" +
                       "3 - Activated Company \n" +
                       "4 - Delete Company \n" +
-                      "5 - Create Department \n" +
-                      "6 - Show All Department \n" +
-                      "7 - Create Employee \n" +
+                      "5 - Get By Name Company\n" +
+                      "6 - Create Department \n" +
+                      "7 - Show All Department \n" +
+                      "8 - Create Employee \n" +
                       "0 - Exit");
 
     string? option = Console.ReadLine();
@@ -25,7 +26,7 @@ while (isContinue)
     bool isInt=int.TryParse(option, out optionNumber);
     if (isInt)
     {
-        if (optionNumber >= 0 && optionNumber <= 5)
+        if (optionNumber >= 0 && optionNumber <= 15)
         {
             switch (optionNumber) 
             {
@@ -54,6 +55,10 @@ while (isContinue)
                     companyService.ShowAll();
                     break;
                 case (int)Menu.ActivatedCompany:
+                    if (companyService.IsCompanyExist() == false)
+                    {
+                        Console.WriteLine("No Company ");
+                    }
                     try
                     {
                         Console.WriteLine("Enter Company Name:");
@@ -66,6 +71,10 @@ while (isContinue)
                     }
                     break;
                  case (int)Menu.DeleteCompany:
+                    if (companyService.IsCompanyExist() == false)
+                    {
+                        Console.WriteLine("No Company ");
+                    }
                     try
                     {
                         Console.WriteLine("Enter Company Name:");
@@ -77,8 +86,20 @@ while (isContinue)
                         Console.WriteLine(ex.Message);
                     }
                     break;
+                case (int)Menu.GetByNameCompany:
+                    try
+                    {
+                        Console.WriteLine("Enter Company Name:");
+                        string? companyName = Console.ReadLine();
+                        companyService.GetCompany(companyName);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    break;
                 case (int)Menu.CreateDepartment:
-                    if (companyService.IsCompanyExist()==false)
+                    if (companyService.IsCompanyExist() == false)
                     {
                         Console.WriteLine("There is no company, create a company twice and then come ");
                         goto case (int)Menu.CreateCompany;
@@ -89,6 +110,9 @@ while (isContinue)
                         string? departmentName = Console.ReadLine();
                         Console.WriteLine("Enter Department Employee Limit:");
                         int employeeLimit = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("-------------------");
+                        companyService.ShowAll();
+                        Console.WriteLine("-------------------");
                         Console.WriteLine("Enter Company Name:");
                         string? companyName2 = Console.ReadLine();
                         departmentService.Create(departmentName, employeeLimit, companyName2);
@@ -96,14 +120,12 @@ while (isContinue)
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex.Message);
-                        goto case 5;
+                        goto case (int)Menu.CreateDepartment;
                     }
                     break;
                 case (int)Menu.ShowAllDepartment:
                     Console.WriteLine("All Department:");
                     departmentService.ShowAll();
-                    break;
-                case 7:
                     break;
                 case 8:
                     break;

@@ -1,5 +1,6 @@
 ﻿using Company.Business.Interfaces;
 using Company.Business.Utilities.Exceptions;
+using Company.Core.Entities;
 using Company.DataAccess.Contexts;
 
 namespace Company.Business.Services;
@@ -41,9 +42,17 @@ public class CompanyService : ICompanyService
         throw new NotImplementedException();
     }
 
-    public Core.Entities.Company GetCompany(int Id)
+    public void GetCompany(string name)
     {
-        throw new NotImplementedException();
+        if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
+        Company.Core.Entities.Company? dbCompany =
+            CompanyDbContext.Companies.Find(c => c.Name.ToLower() == name.ToLower());
+        if (dbCompany is null)
+            throw new NotFoundException($"{name} company not found");
+        Console.WriteLine($" Id: {dbCompany.Id}\n" +
+                          $" Company name: {dbCompany.Name}\n" +
+                          $" Company Description: {dbCompany.Description}");
+        GetDepartmentIncluded(dbCompany.Name);
     }
 
     public void GetDepartmentIncluded(string name)
@@ -55,13 +64,6 @@ public class CompanyService : ICompanyService
                 Console.WriteLine($"Id: {department.Id}; Department name: {department.Name}");
             }
         }
-    }
-
-    public Core.Entities.Company? GetCompany(string name)
-    {
-        if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
-        return CompanyDbContext.Companies.Find(c => c.Name.ToLower() == name.ToLower());
-
     }
 
     public Core.Entities.Company? FindCompanyByName(string name)
@@ -85,7 +87,7 @@ public class CompanyService : ICompanyService
     {
         foreach (var item in CompanyDbContext.Companies)
         {
-            if (item is not null)
+            if (item is not null && item.IsActive == true)
             {
                 return true;
             }
