@@ -66,6 +66,7 @@ while (isContinue)
                     }
                     break;
                 case (int)Menu.ShowAllCompany:
+                    Console.WriteLine("---------------------");
                     Console.WriteLine("All Company:");
                     if (companyService.IsCompanyExist() == false)
                     {
@@ -84,6 +85,7 @@ while (isContinue)
                     }
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Company Name:");
                         string? companyName = Console.ReadLine();
                         companyService.Activated(companyName);
@@ -102,6 +104,7 @@ while (isContinue)
                     }
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Company Name:");
                         string? companyName = Console.ReadLine();
                         companyService.Delete(companyName);
@@ -114,6 +117,7 @@ while (isContinue)
                 case (int)Menu.GetByNameCompany:
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Company Name:");
                         string? companyName = Console.ReadLine();
                         companyService.GetCompany(companyName);
@@ -133,6 +137,7 @@ while (isContinue)
                     }
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Department Name:");
                         string? departmentName = Console.ReadLine();
                         Console.WriteLine("Enter Department Employee Limit:");
@@ -158,6 +163,7 @@ while (isContinue)
                         Console.ResetColor();
                         goto case (int)Menu.CreateDepartment;
                     }
+                    Console.WriteLine("---------------------");
                     Console.WriteLine("All Department:");
                     departmentService.GetAllDepartment();
                     break;
@@ -165,6 +171,7 @@ while (isContinue)
                 case (int)Menu.ActivateDepartment:
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Department Name:");
                         string? departmentName = Console.ReadLine();
                         departmentService.Activete(departmentName);
@@ -178,6 +185,7 @@ while (isContinue)
                 case (int)Menu.DeleteDepartment:
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Department Name:");
                         string? departmentName = Console.ReadLine();
                         departmentService.Delete(departmentName);
@@ -191,6 +199,7 @@ while (isContinue)
                 case (int)Menu.GetDepartmentEmployees:
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Department Name:");
                         string? departmentName = Console.ReadLine();
                         departmentService.GetDepartmentEmployees(departmentName);
@@ -204,6 +213,7 @@ while (isContinue)
                 case (int)Menu.CreateEmployee:
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Employee Name:");
                         string? employeeName = Console.ReadLine();
                         Console.WriteLine("Enter Employee Surname:");
@@ -228,13 +238,17 @@ while (isContinue)
                     break;
 
                 case (int)Menu.ShowAllEmployee:
+                    Console.WriteLine("---------------------");
                     Console.WriteLine("All Employee:");
+                    Console.WriteLine("---------------------");
                     employeeService.ShowAll();
+                    Console.WriteLine("---------------------");
                     break;
 
                 case (int)Menu.getCompany:
                     try
                     {
+                        Console.WriteLine("---------------------");
                         Console.WriteLine("Enter Company Name:");
                         string? companyName = Console.ReadLine();
                         companyService.GetCompany(companyName);
