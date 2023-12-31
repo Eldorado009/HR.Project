@@ -8,5 +8,12 @@ public enum Menu
     DeleteCompany,
     GetByNameCompany,
     CreateDepartment,
-    ShowAllDepartment,
+    GetAllDepartment,
+    ActivateDepartment,
+    DeleteDepartment,
+    GetDepartmentEmployees,
+    CreateEmployee,
+    ShowAllEmployee,
+    getCompany,
+    moveEmployee
 }

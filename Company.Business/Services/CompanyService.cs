@@ -36,12 +36,6 @@ public class CompanyService : ICompanyService
             throw new NotFoundException($"{name} company not found");
         dbCompany.IsActive = false;
     }
-
-    public void GetAllDepartment(string departmentName)
-    {
-        throw new NotImplementedException();
-    }
-
     public void GetCompany(string name)
     {
         if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
@@ -62,6 +56,19 @@ public class CompanyService : ICompanyService
             if (department.Company.Name.ToLower() == name.ToLower())
             {
                 Console.WriteLine($"Id: {department.Id}; Department name: {department.Name}");
+                Console.WriteLine("----------------------------------------------------------");
+                foreach (var employee in CompanyDbContext.Employees)
+                {
+                    if (employee.Department.Name.ToLower() == department.Name.ToLower())
+                    {
+                        Console.WriteLine($"ID:{employee.Id}\n" +
+                                          $"Name:{employee.Name}\n" + 
+                                          $"Surname:{employee.Surname}\n" +
+                                          $"Email:{employee.Email}\n" +
+                                          $"Phone number: {employee.PhoneNumber}");
+                        Console.WriteLine("-----------------------------------------------------");
+                    }
+                }
             }
         }
     }

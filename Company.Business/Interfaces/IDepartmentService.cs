@@ -8,8 +8,12 @@ public interface IDepartmentService
     public Department? GetById(int departmenId);
     public Department? GetByName(string name);
     void AddEmployee(string name, int employeeId, int companyId );
-    void UpdateDepartment(string newName, int employeeLimit);
-    void GetDepartmentEmployees(string departmentName);
-    void ShowAll();
+    void UpdateDepartment(string oldDepartmentName,string newDepartmentName, int newDepartmentEmployeeLimit);
+    void GetDepartmentEmployees(string Name);
+    void GetAllDepartment();
+    void Delete(string name);
+    void Activete(string name);
+    bool isDepartmentExist();
+    void moveEmployee(int employeeId);
     
 }
